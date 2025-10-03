@@ -59,7 +59,7 @@ func player_jump(delta : float):
 	if Input.is_action_just_pressed("jump"):
 		velocity.y = jump
 		current_state = State.Jump
-
+   
 	if !is_on_floor() and current_state == State.Jump:
 		var direction = input_movement()
 		velocity.x += direction * jump_horizontal * delta
