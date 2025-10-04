@@ -19,3 +19,16 @@ position = Vector2(-115, 37)
 
 [node name="Point2" type="Marker2D" parent="EnemyCrab/PatrolPoints" index="1"]
 position = Vector2(60, 38)
+
+[node name="EnemyCrab2" parent="." index="3" node_paths=PackedStringArray("patrol_points") instance=ExtResource("2_smeaq")]
+position = Vector2(572, -106)
+patrol_points = NodePath("PatrolPoints")
+wait_time = 1
+
+[node name="PatrolPoints" type="Node2D" parent="EnemyCrab2" index="3"]
+
+[node name="Point1" type="Marker2D" parent="EnemyCrab2/PatrolPoints" index="0"]
+position = Vector2(-115, 37)
+
+[node name="Point2" type="Marker2D" parent="EnemyCrab2/PatrolPoints" index="1"]
+position = Vector2(60, 38)
