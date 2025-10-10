@@ -64,7 +64,7 @@ texture = ExtResource("1_qhxi7")
 6:6/0 = 0
 8:6/0 = 0
 10:6/0 = 0
-10:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3, 5.5, 3, 5, 8, 4.5, 8, 8, -8, 8, -8, 6)
+10:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -3.5, 5.5, 3, 4.5, 8, 4.5, 8, 8, -8, 8)
 11:6/0 = 0
 11:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3, 4.5, 3, 5.5, 8, 8, 8, 8, -8, 8, -8, 4.5)
 13:6/0 = 0
@@ -115,9 +115,9 @@ texture = ExtResource("1_qhxi7")
 5:9/0 = 0
 5:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.75, -3, 4.875, 2.375, 8, 8, -8, 8, -8, -8)
 7:9/0 = 0
-7:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.625, -4.125, 8, -3.875, 8, 8, -8, 8, -6.625, -1.25)
+7:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 4, 8, 0, 8, 8, -8, 8)
 8:9/0 = 0
-8:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.75, -8, 8, -8, 8, 8, -8, 8, -8, -4.375)
+8:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, -8, 8, 8, -8, 8)
 10:9/0 = 0
 10:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 1, -2.5, 8, 1, 8, 8, -8, 8, -8, -8)
 11:9/0 = 0
@@ -282,5 +282,8 @@ tile_set = SubResource("TileSet_xdhn3")
 
 [node name="Player" parent="." instance=ExtResource("2_7capf")]
 position = Vector2(124, -138)
+speed = 800
+jump = -350
+max_jump_horizontal_speed = 350
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
