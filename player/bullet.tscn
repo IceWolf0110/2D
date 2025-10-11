@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://jgmb7qa8k7fm"]
+
+[ext_resource type="Texture2D" uid="uid://cjc6eow4evqgh" path="res://player/shot.png" id="1_1y6ct"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j40gx"]
+atlas = ExtResource("1_1y6ct")
+region = Rect2(0, 0, 6, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_boyjm"]
+atlas = ExtResource("1_1y6ct")
+region = Rect2(6, 0, 6, 4)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_42du2"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j40gx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_boyjm")
+}],
+"loop": true,
+"name": &"shot",
+"speed": 10.0
+}]
+
+[node name="Bullet" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_42du2")
+animation = &"shot"
+frame_progress = 0.631709
