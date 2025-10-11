@@ -11,22 +11,22 @@ const GRAVITY = 1000
 @export var jump_horizontal_speed : int = 1000
 @export var  max_jump_horizontal_speed : int = 300
 
-enum State { Idle, Run, Jump }
+enum State { Idle, Run, Jump, Shoot }
 
 var current_state : State
 
 
-var character_sprite : Sprite2D
-
 func _ready():
 	current_state = State.Idle
+
 
 func _physics_process(delta : float):
 	player_falling(delta)
 	player_idle(delta)
 	player_run(delta)
 	player_jump(delta)
-
+	player_shooting(delta)
+	
 	move_and_slide()
 
 	player_animations()
@@ -39,7 +39,7 @@ func player_falling(delta : float):
 		velocity.y += GRAVITY * delta
 
 
-func player_idle(delta : float):
+func player_idle(_delta : float):
 	if is_on_floor():
 		current_state = State.Idle
 
@@ -72,13 +72,23 @@ func player_jump(delta : float):
 		velocity.x = clamp(velocity.x, -max_jump_horizontal_speed, max_jump_horizontal_speed)
 
 
+func player_shooting(_delta : float):
+	var direction = input_movement()
+	
+	if direction != 0 and Input.is_action_just_pressed("shoot"):
+		current_state = State.Shoot
+
+
+
 func player_animations():
 	if current_state == State.Idle:
 		animation_spite_2d.play("idle")
-	elif current_state == State.Run:
+	elif current_state == State.Run and animation_spite_2d.animation != "run_shoot":
 		animation_spite_2d.play("run")
 	elif current_state == State.Jump:
 		animation_spite_2d.play("jump")
+	elif current_state == State.Shoot:
+		animation_spite_2d.play("run_shoot")
 
 
 func input_movement():

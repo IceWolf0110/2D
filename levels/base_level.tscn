@@ -282,7 +282,7 @@ tile_set = SubResource("TileSet_xdhn3")
 
 [node name="Player" parent="." instance=ExtResource("2_7capf")]
 position = Vector2(124, -138)
-speed = 800
+speed = 500
 jump = -350
 max_jump_horizontal_speed = 350
 
