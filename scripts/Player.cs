@@ -6,7 +6,7 @@ namespace D.scripts;
 public partial class Player : CharacterBody2D
 {
     [Export] private int _speed = 1000;
-    [Export] private int _maxHorizontalSpeed = 1000;
+    [Export] private int _maxHorizontalSpeed = 300;
     [Export] private int _slowdownSpeed = 1000;
     
     [Export] private int _jumpSpeed = -300;
