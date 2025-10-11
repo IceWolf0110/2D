@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://cjr6c8nd8s33w"]
+[gd_scene load_steps=11 format=3 uid="uid://cjr6c8nd8s33w"]
 
 [ext_resource type="Texture2D" uid="uid://btv2anrjf7iyk" path="res://assets/sprites/enemies/crab-idle/crab-idle-1.png" id="1_1ynhd"]
-[ext_resource type="Script" path="res://scripts/enemy_crab.gd" id="1_gga44"]
 [ext_resource type="Texture2D" uid="uid://cavjwanxl8hry" path="res://assets/sprites/enemies/crab-idle/crab-idle-2.png" id="2_cw45p"]
 [ext_resource type="Texture2D" uid="uid://c32deg5giso86" path="res://assets/sprites/enemies/crab-idle/crab-idle-3.png" id="3_34afs"]
 [ext_resource type="Texture2D" uid="uid://bvl2d8bsho03" path="res://assets/sprites/enemies/crab-idle/crab-idle-4.png" id="4_b7mnl"]
@@ -56,7 +55,6 @@ animations = [{
 radius = 14.0
 
 [node name="EnemyCrab" type="CharacterBody2D"]
-script = ExtResource("1_gga44")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -15)
